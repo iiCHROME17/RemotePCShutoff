@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goodnight App</title>
+    <style>
+        /* Reset default browser styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .Header-Container {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .Title {
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .Control-Panel {
+            width: 100%;
+            max-width: 400px; /* Adjust as needed */
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center items horizontally */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center items horizontally */
+            width: 100%; /* Full width of parent */
+        }
+
+        .button-19 {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+            margin-top: 10px; /* Add some space between buttons */
+        }
+
+        .button-19:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .Title {
+                font-size: 1.5rem;
+            }
+
+            .Control-Panel {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .button-19 {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="Header-Container">
+        <h1 class="Title">The I Controller Application</h1>
+    </div>
+
+    <div class="Control-Panel">
+        <div class="GN-Container">
+            <form action="/goodnight" method="post">
+                <button class="button-19" role="button" type="submit">Shutdown Immediately</button>
+            </form>
+        </div>
+        <div class="GN-Container">
+            <form action="/goodnight" method="post">
+                <button class="button-19" role="button" type="submit">Shutdown after 45 minutes</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
